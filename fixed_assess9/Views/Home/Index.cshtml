@@ -1,0 +1,69 @@
+﻿@model List<Character>
+
+@{
+    ViewData["Title"] = "Home Page";
+    
+
+}
+
+<div class="text-center">
+    <h1 class="display-4">Example A Song of Ice and Fire characters:</h1>
+</div>
+<style type="text/css">
+    td {
+        padding: 0 25px;
+    }
+</style>
+
+    <table border=1 frame=void rules=rows>
+        <tr>
+            <th>Name</th>
+            <th>Gender</th>
+            <th> Played by</th>
+        </tr>
+        <tr>
+            <td>@Model[0].name</td>
+            <td>@Model[0].gender</td>
+            @foreach (string player in Model[0].playedBy)
+            {
+                <td>@player</td>
+            }
+
+        </tr>
+        <tr>
+            <td>@Model[1].name</td>
+            <td>@Model[1].gender</td>
+            @foreach (string player in Model[1].playedBy)
+            {
+                <td>@player</td>
+            }
+        </tr>
+        <tr>
+            <td>@Model[2].name</td>
+            <td>@Model[2].gender</td>
+            @foreach (string player in Model[2].playedBy)
+            {
+                <td>@player</td>
+            }
+        </tr>
+        <tr>
+            <td>@Model[3].name</td>
+            <td>@Model[3].gender</td>
+            @foreach (string player in Model[3].playedBy)
+            {
+                <td>@player</td>
+            }
+        </tr>
+        <tr>
+            <td>@Model[4].name</td>
+            <td>@Model[4].gender</td>
+            @foreach (string player in Model[4].playedBy)
+            {
+                <td>@player</td>
+            }
+        </tr>
+
+
+    </table>
+
+
